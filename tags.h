@@ -7,6 +7,7 @@
 #ifndef TAGS_H
 #define TAGS_H
 
+#include <iostream>
 #include <string>
 #include <stack>
 #include <vector>
@@ -16,11 +17,11 @@ namespace MBTLIN007{
     
     struct TagStruct{
         std::string name;
-        std::int count;
-        std::string text
+        int count;
+        std::string text;
     };
 
-    std::vector<TagStruct> vect;
+    extern std::vector<TagStruct> vect;
 
     // Methods Declarations
     void parse (std::string file_str);
@@ -29,5 +30,4 @@ namespace MBTLIN007{
     void list (std::string tag);
 
 }
-
 #endif

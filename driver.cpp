@@ -9,5 +9,5 @@
 
 int main(void){
     // Do something
-    return 0
+    return 0;
 }
