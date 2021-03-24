@@ -17,7 +17,12 @@ tags.o: tags.cpp tags.h
 driver.o: driver.cpp
 	$(CC) -c driver.cpp
 
-# delete all the object code files
+# delete all the object code files and output files
 clean:
 	@rm -f *.o
-	@rm driver
+	@rm -f driver
+	@rm -f tag.txt
+
+# Delete all input data files
+clean-data:
+	@rm -rf ./data
