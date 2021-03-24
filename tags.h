@@ -7,10 +7,27 @@
 #ifndef TAGS_H
 #define TAGS_H
 
-// includes
+#include <string>
+#include <stack>
+#include <vector>
+#include <sstream>
 
 namespace MBTLIN007{
-    // declaration
+    
+    struct TagStruct{
+        std::string name;
+        std::int count;
+        std::string text
+    };
+
+    std::vector<TagStruct> vect;
+
+    // Methods Declarations
+    void parse (std::string file_str);
+    void printTags (void);
+    void dump (void);
+    void list (std::string tag);
+
 }
 
 #endif
