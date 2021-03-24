@@ -31,7 +31,7 @@ int main(void){
             std::cout << "Enter file name" << std::endl;
             std::string fileName;
             std::cin >> fileName;
-            
+            MBTLIN007::vect = {};
             MBTLIN007::parse(fileName);
         } 
 

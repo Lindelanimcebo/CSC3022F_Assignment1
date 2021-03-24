@@ -16,14 +16,10 @@ namespace MBTLIN007{
         std::string line;
         std::string file_str = "";
 
-        //std::cout << fileName << std::endl;
-
         while ( std::getline(file_in, line) ){
             file_str.append(line);
         }
         file_in.close();
-
-        //std::cout << file_str << std::endl;
 
         std::stack<std::string> opening_stack;
         int opn = -1, cls = -1, opnl = 0, clsf = 0;
@@ -45,15 +41,13 @@ namespace MBTLIN007{
                         std::string tag = opening_stack.top();
                         opening_stack.pop();
                         std::string txt = file_str.substr( opnl + 1, opn - opnl - 1);
-
                         addTag(tag, txt);
                         
                     }
                 }
             }
             it++;
-        }
-        
+        } 
     }
 
     void printTags (void){
@@ -61,6 +55,7 @@ namespace MBTLIN007{
             std::cout << vect[i].name << std::endl;
         }
     }
+
     void dump (void){
         std::ofstream file_out;
         file_out.open("tag.txt");
@@ -83,6 +78,7 @@ namespace MBTLIN007{
     void addTag( std::string tag, std::string txt){
         bool found = false;
         int i = 0;
+
         while (!found && i < vect.size()) {
             if (vect[i++].name == tag){ found = true; }
         }
