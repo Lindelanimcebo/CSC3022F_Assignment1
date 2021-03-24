@@ -22,6 +22,9 @@ namespace MBTLIN007{
         file_in.close();
 
         std::stack<std::string> opening_stack;
+        std::stack<int> oindex_stack;
+        std::stack<int> olindex_stack;
+
         int opn = -1, cls = -1, opnl = 0, clsf = 0;
         int it = 0, sz = file_str.size();
         
@@ -31,21 +34,33 @@ namespace MBTLIN007{
             } 
             else if ( file_str.substr(it, 1) == ">" ){
                 
-                if ( cls < opn ){ 
+                if ( cls < opn ){
                     cls = it;
                     if ( file_str.substr(opn + 1, 1) != "/"){
                         opnl = cls;
+                        olindex_stack.push(opnl);
                         opening_stack.push( file_str.substr ( opn + 1, cls - opn - 1 ) );
                     } 
                     else {
                         std::string tag = opening_stack.top();
                         opening_stack.pop();
+
+                        int opnl = olindex_stack.top();
+                        olindex_stack.pop();
+
                         std::string txt = file_str.substr( opnl + 1, opn - opnl - 1);
                         addTag(tag, txt);
                         
+                        if(!opening_stack.empty()){
+                            int start = opnl - tag.size() - 1;
+                            file_str.erase(start, cls - start + 1);
+                            it =  start - 1;
+                            cls = olindex_stack.top();
+                        }
                     }
                 }
             }
+            sz = file_str.size();
             it++;
         } 
     }

@@ -11,6 +11,7 @@
 int main(void){
     MBTLIN007::vect = {};
     for (;;){
+        std::cout << "*************************************************************************\n" << std::endl;
         std::cout << "Enter an option (r,p,d,l) or q to quit, and press return.." << std::endl;
         std::cout << "r: Read and process tag file" << std::endl;
         std::cout << "p: Print all tags" << std::endl;
@@ -26,6 +27,8 @@ int main(void){
             system("clear");
             break;
         }
+
+        std::cout << "\n" << std::endl;
 
         if ( in == "r" ){
             std::cout << "Enter file name" << std::endl;
