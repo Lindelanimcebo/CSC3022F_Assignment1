@@ -1,0 +1,65 @@
+commit fea08b22a2972d037a69a54d100b45fced07a189
+Author: lindelanimcebo <lindelanimcebo@gmail.com>
+Date:   Thu Mar 25 00:17:19 2021 +0200
+
+    Added README
+
+commit c3e9f3219381e711b33501f5d810f68d3a2e2d3a
+Author: lindelanimcebo <lindelanimcebo@gmail.com>
+Date:   Thu Mar 25 00:04:45 2021 +0200
+
+    Refactoring - comments and variable names
+
+commit ee39935ef4d347398f002bc7f952e58fd6e30047
+Author: lindelanimcebo <lindelanimcebo@gmail.com>
+Date:   Wed Mar 24 22:43:00 2021 +0200
+
+    Added make targets to remove input & output files
+
+commit 2dbec684352134bcb97d0cd45b945fd8652530b7
+Author: lindelanimcebo <lindelanimcebo@gmail.com>
+Date:   Wed Mar 24 22:40:54 2021 +0200
+
+    Added functionality for nested tags
+
+commit bceb5391313793cdbbd3ac090b16a5943cd7ef91
+Author: lindelanimcebo <lindelanimcebo@gmail.com>
+Date:   Wed Mar 24 21:04:07 2021 +0200
+
+    Initialize empty vector everytime a new file is parsed
+
+commit ef3eec6efd4269c8a6dec86d1177f98cffbbbf61
+Author: lindelanimcebo <lindelanimcebo@gmail.com>
+Date:   Wed Mar 24 20:54:20 2021 +0200
+
+    Refactoring - created new function to seperate adding to a vector functionality
+
+commit 42d9e19c4f18c74e3f0fa5a8eff0e38ae138017e
+Author: lindelanimcebo <lindelanimcebo@gmail.com>
+Date:   Wed Mar 24 18:06:32 2021 +0200
+
+    Implemented all functions
+
+commit 57a0afab4c5ddd5a860f29b6e851474e7f30a223
+Author: lindelanimcebo <lindelanimcebo@gmail.com>
+Date:   Wed Mar 24 14:00:18 2021 +0200
+
+    Created the menu and initial processing user input.
+
+commit e225a0c485e9d69356812ec23f51e12baf593425
+Author: lindelanimcebo <lindelanimcebo@gmail.com>
+Date:   Wed Mar 24 13:33:57 2021 +0200
+
+    Created Makefile, and stub methods implementation
+
+commit 589084f178b3f7e2275175c83ac4e7571cc223f6
+Author: lindelanimcebo <lindelanimcebo@gmail.com>
+Date:   Wed Mar 24 12:52:39 2021 +0200
+
+    Declared the Tag struct and vector, and methods to be used
+
+commit a892806b40d4280bcedcd4d54777d1a260b5f8a7
+Author: lindelanimcebo <lindelanimcebo@gmail.com>
+Date:   Wed Mar 24 11:42:33 2021 +0200
+
+    Created skeleton files; tags.h, tags.cpp, driver.cpp

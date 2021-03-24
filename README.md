@@ -1,5 +1,23 @@
 # CSC3022F - assignment 1 : Tag Enumeration
 
+# Files
+
+## [tags.h](tags.h)
+
+hearder file defining attributes used by the application
+
+## [tags.cpp](tags.cpp)
+
+Implements the attributes defined by the [header](tags.h) file
+
+## [driver.cpp](driver.cpp)
+
+Main file to run the application
+
+## [gitlogs.txt](gitlogs.txt)
+
+contains logs of all git commits used for developing this application
+
 ### Build
 
 ```unix
@@ -19,8 +37,6 @@ $ make clean-data
 ```unix
 $ ./driver
 ```
-
-
 
 ## User input
 
