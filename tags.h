@@ -30,6 +30,7 @@ namespace MBTLIN007{
     void printTags (void);
     void dump (void);
     void list (std::string tag);
+    void addTag( std::string tag, std::string txt );
 
 }
 #endif

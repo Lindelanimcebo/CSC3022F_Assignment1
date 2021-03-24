@@ -6,8 +6,6 @@
 
 #include "tags.h"
 
-
-
 namespace MBTLIN007{
 
     std::vector<TagStruct> vect;
@@ -46,21 +44,10 @@ namespace MBTLIN007{
                     else {
                         std::string tag = opening_stack.top();
                         opening_stack.pop();
-                        bool found = false;
-                        int i = 0;
-                        while (!found && i < vect.size()) {
-                            if (vect[i++].name == tag){ found = true; }
-                        }
-
                         std::string txt = file_str.substr( opnl + 1, opn - opnl - 1);
-                        if (found){
-                            vect[i-1].text = vect[i-1].text + ":" + txt;
-                            vect[i-1].count++;
-                        }
-                        else{
-                            TagStruct temp = {tag, 1, txt};
-                            vect.push_back(temp);
-                        }
+
+                        addTag(tag, txt);
+                        
                     }
                 }
             }
@@ -91,6 +78,23 @@ namespace MBTLIN007{
             }
 
         };
+    }
+
+    void addTag( std::string tag, std::string txt){
+        bool found = false;
+        int i = 0;
+        while (!found && i < vect.size()) {
+            if (vect[i++].name == tag){ found = true; }
+        }
+
+        if (found){
+            vect[i-1].text = vect[i-1].text + ":" + txt;
+            vect[i-1].count++;
+        }
+        else{
+            TagStruct temp = {tag, 1, txt};
+            vect.push_back(temp);
+        }
     }
 
 }
