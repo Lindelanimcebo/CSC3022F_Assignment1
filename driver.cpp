@@ -9,6 +9,7 @@
 #include "tags.h"
 
 int main(void){
+    MBTLIN007::vect = {};
     for (;;){
         std::cout << "Enter an option (r,p,d,l) or q to quit, and press return.." << std::endl;
         std::cout << "r: Read and process tag file" << std::endl;
@@ -27,7 +28,11 @@ int main(void){
         }
 
         if ( in == "r" ){
-            MBTLIN007::parse("Any");
+            std::cout << "Enter file name" << std::endl;
+            std::string fileName;
+            std::cin >> fileName;
+            
+            MBTLIN007::parse(fileName);
         } 
 
         else if (in == "p") {
@@ -39,7 +44,10 @@ int main(void){
         }
 
         else if ( in == "l") {
-            MBTLIN007::list("Any");
+            std::cout << "Enter the tag name :" << std::endl;
+            std::string tagName;
+            std::cin >> tagName;
+            MBTLIN007::list(tagName);
         }
 
         else { std::cout << "Invalid command!" << std::endl; }

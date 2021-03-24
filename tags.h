@@ -11,7 +11,9 @@
 #include <string>
 #include <stack>
 #include <vector>
+#include <fstream>
 #include <sstream>
+#include <algorithm>
 
 namespace MBTLIN007{
     
@@ -24,7 +26,7 @@ namespace MBTLIN007{
     extern std::vector<TagStruct> vect;
 
     // Methods Declarations
-    void parse (std::string file_str);
+    void parse (std::string fileName);
     void printTags (void);
     void dump (void);
     void list (std::string tag);
