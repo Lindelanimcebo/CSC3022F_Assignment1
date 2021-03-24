@@ -9,7 +9,9 @@
 #include "tags.h"
 
 int main(void){
+
     MBTLIN007::vect = {};
+
     for (;;){
         std::cout << "*************************************************************************\n" << std::endl;
         std::cout << "Enter an option (r,p,d,l) or q to quit, and press return.." << std::endl;
@@ -31,6 +33,7 @@ int main(void){
         std::cout << "\n" << std::endl;
 
         if ( in == "r" ){
+            // Reading and parsing an input file
             std::cout << "Enter file name" << std::endl;
             std::string fileName;
             std::cin >> fileName;
@@ -39,14 +42,17 @@ int main(void){
         } 
 
         else if (in == "p") {
+            // Printing all tags found in the file
             MBTLIN007::printTags();
         }
 
         else if (in == "d") {
+            // Dumping all tags found to an output file
             MBTLIN007::dump();
         }
 
         else if ( in == "l") {
+            // Lists all text within a specified tag
             std::cout << "Enter the tag name :" << std::endl;
             std::string tagName;
             std::cin >> tagName;
